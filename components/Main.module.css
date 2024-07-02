@@ -35,9 +35,10 @@
 
 .left_two > h3 {
   margin-top: 20px;
-  font-size: 17px;
+  font-size: 1.1rem;
   font-weight: normal;
   color: #92a0b7;
+  width: 450px;
 }
 
 .left_three {
@@ -125,19 +126,15 @@
 .right_bottom_experience {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
+}
+
+.right_bottom_experience > h3 {
+  font-size: 1.1rem;
 }
 
 .experience_card {
   display: flex;
-  align-items: flex-start;
-  padding: 20px;
-}
-
-.experience_card:hover {
-  background-color: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(10px);
-  border-radius: 7px;
 }
 
 .experience_card_left {
@@ -168,11 +165,10 @@
 
 .capsules_container_card {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: auto;
-  max-width: fit-content;
+  grid-template-columns: repeat(3, 1fr);
   gap: 5px;
   margin-top: 5px;
+  width: 220px;
 }
 
 .capsule_card {
@@ -209,13 +205,17 @@
   margin-top: 100px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 35px;
+}
+
+.right_bottom_projects > h3 {
+  font-size: 1.1rem;
 }
 
 .right_project_card {
   display: flex;
   align-items: flex-start;
-  padding: 20px;
+  padding: 10px;
 }
 
 .right_project_card:hover .right_project_card_name > img {
@@ -269,23 +269,23 @@
 
 .right_project_card_capsules {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: auto;
-  max-width: fit-content;
+  grid-template-columns: repeat(3, 1fr);
   gap: 5px;
   margin-top: 5px;
+  width: 220px;
 }
 
 .right_top > h3 {
   display: none;
 }
 
-.right_bottom_experience > h3 {
-  display: none;
-}
-
-.right_bottom_projects > h3 {
-  display: none;
+.footer_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  font-size: 14px;
 }
 
 @media only screen and (max-width: 1634px) {
@@ -369,12 +369,6 @@
   .experience_card_right {
     margin-left: 100px;
   }
-  .capsules_container_card {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    grid-template-rows: auto;
-    max-width: fit-content;
-  }
   .right_bottom_projects > h3 {
     color: #ffffff;
     font-size: 16px;
@@ -387,10 +381,16 @@
     gap: 50px;
   }
   .right_project_card {
-    padding: 0px;
+    width: fit-content;
   }
   .right_project_card_image > img {
     width: 200px;
+  }
+
+  .experience_card:hover {
+    background-color: none;
+    backdrop-filter: blur(0px);
+    border-radius: 0px;
   }
 }
 
@@ -408,10 +408,13 @@
 
 @media only screen and (max-width: 640px) {
   .left_one > h1 {
-    font-size: 38px;
+    font-size: 32px;
   }
   .left_two > h2 {
-    font-size: 20px;
+    font-size: 18px;
+  }
+  .left_two > h3 {
+    width: 100%;
   }
   .experience_card {
     display: flex;
@@ -428,8 +431,16 @@
     margin-left: 0px;
     margin-top: 10px;
   }
-
+  .right_project_card {
+    display: flex;
+    flex-direction: column;
+  }
+  .right_project_card_image > img {
+    width: 100%;
+  }
   .right_project_card_details {
     gap: 5px;
+    margin-left: 0px;
+    margin-top: 10px;
   }
 }
